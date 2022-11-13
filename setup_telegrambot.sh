@@ -30,8 +30,7 @@ getProjectName() {
 }
 
 setupNode() {
-    chmod +x ./install_latest_node.sh
-    ./install_latest_node.sh
+	bash <(curl -sL https://raw.githubusercontent.com/saniyar-dev/scripts/main/install_latest_node.sh)
 }
 
 installGit() {
