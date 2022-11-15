@@ -46,6 +46,7 @@ getRepo() {
 
     git clone https://hamgit.ir/saniyar.dev/create-telegram-bot.git $PROJECT_NAME
     cd $PROJECT_NAME
+    git remote remove origin
 }
 
 installPackages() {
@@ -65,6 +66,8 @@ setBotToken() {
     echo "BOT_TOKEN=\"$BOT_TOKEN\"" > .env
 
     colorEcho $GREEN "BOT_TOKEN set successfully"
+    git add -A
+    git commit -m "add: BOT_TOKEN"
 }
 
 setupBot() {
